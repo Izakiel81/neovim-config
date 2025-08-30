@@ -1,5 +1,4 @@
 ![](https://c.tenor.com/iMnwiRazlboAAAAd/tenor.gif)
-![](https://github.com/user-attachments/assets/f2aba2c9-6f2b-4553-97be-fefb84eb62f9)
 <br/>
 ![](https://i.redd.it/x1r2dbf8s73b1.gif)
 ![](https://i.redd.it/77hoa4dwxfzx.gif)
