@@ -26,20 +26,16 @@ return {
       yaml = { 'prettierd', 'prettier' },
       markdown = { 'prettierd', 'prettier' },
       dockerfile = { 'prettierd', 'prettier' },
-      vue = { 'prettierd', 'prettier' }, -- Explicitly define vue
+      vue = { 'prettierd', 'prettier' },
     },
     formatters = {
       stylua = {
         command = 'stylua',
         args = { '--indent-type', 'Spaces', '--indent-width', '2', '-' },
       },
-      prettierd = {
-        command = 'prettierd',
-        args = { '$FILENAME', '--tab-width', '2', '--plugin', '@prettier/plugin-vue' }, -- Explicitly include Vue plugin
-      },
       prettier = {
-        command = 'prettier',
-        args = { '--tab-width', '2', '--plugin', '@prettier/plugin-vue', '$FILENAME' }, -- Explicitly include Vue plugin
+        command = 'prettierd',
+        args = { "--stdin-filepath", '$FILENAME', '--tab-width', '2' },
       },
       shfmt = {
         command = 'shfmt',
@@ -56,7 +52,7 @@ return {
     },
     format_on_save = {
       timeout_ms = 500,
-      lsp_fallback = true, -- Enable LSP fallback for Vue if Prettier fails
+      lsp_fallback = true,
     },
   },
 }
