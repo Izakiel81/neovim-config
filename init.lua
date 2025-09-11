@@ -7,3 +7,4 @@ require("mason-lspconfig").setup {
     "ts_ls"
   }
 }
+require('nvim-highlight-colors').setup({})
