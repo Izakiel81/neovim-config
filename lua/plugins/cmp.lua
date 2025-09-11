@@ -16,6 +16,9 @@ return {
           vim.fn["vsnip#anonymous"](args.body)
         end,
       },
+      formatting = {
+        format = require("nvim-highlight-colors").format
+      },
       window = {},
       mapping = cmp.mapping.preset.insert({
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
@@ -31,7 +34,6 @@ return {
         { name = "buffer" },
       }),
     })
-
     cmp.setup.cmdline({ "/", "?" }, {
       mapping = cmp.mapping.preset.cmdline(),
       sources = {
