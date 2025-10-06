@@ -5,18 +5,26 @@ return {
   event = "InsertEnter",
   config = function()
     require("copilot").setup({
-      -- You can add your configuration options here
       panel = {
-        enabled = false, -- Set to true to show a side panel with suggestions
+        enabled = false,
       },
       suggestion = {
         enabled = true,
-        auto_trigger = true,
-        -- You can configure keymaps here
+        auto_trigger = false, -- only show when manually requested
         keymap = {
-          accept = "<Tab>", -- Common keymap to accept suggestion
+          accept = "<Tab>",
+          next = "<C-n>",
+          prev = "<C-p>",
+          dismiss = "<C-]>",
         },
       },
     })
+
+    -- ✅ Manual trigger for Copilot suggestion
+    -- This binds <C-l> (Ctrl+L) to manually request a suggestion
+    vim.keymap.set("i", "<C-l>", function()
+      require("copilot.suggestion").next()
+    end, { desc = "Trigger Copilot suggestion" })
   end,
 }
+

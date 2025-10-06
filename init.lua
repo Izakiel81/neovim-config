@@ -1,10 +1,11 @@
 require("config")
+require("lsp")
 require("mason").setup()
-require("mason-lspconfig").setup {
+require("mason-lspconfig").setup({
   automatic_enable = {
     "lua_ls",
     "vimls",
-    "ts_ls"
-  }
-}
-require('nvim-highlight-colors').setup({})
+    "ts_ls",
+  },
+})
+require("nvim-highlight-colors").setup({})
