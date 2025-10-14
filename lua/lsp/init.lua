@@ -6,6 +6,7 @@ local servers = {
   "cssls",
   "stylelint_lsp",
   "dockerls",
+  "pyright",
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

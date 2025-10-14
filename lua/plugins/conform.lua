@@ -49,6 +49,16 @@ return {
         command = "sql-formatter",
         args = { "--config", '{"tabWidth": 2}', "$FILENAME" },
       },
+      isort = {
+        command = "isort",
+        args = { "--profile", "black", "-" },
+        stdin = true,
+      },
+      black = {
+        command = "black",
+        args = { "-" },
+        stdin = true,
+      },
     },
     format_on_save = {
       timeout_ms = 500,
