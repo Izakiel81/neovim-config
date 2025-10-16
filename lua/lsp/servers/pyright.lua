@@ -10,12 +10,15 @@ return {
     "setup.py",
     "setup.cfg",
     "requirements.txt",
+    "Pipfile",
+    "pyrightconfig.json",
     ".git"
   ),
   settings = {
     python = {
       analysis = {
         typeCheckingMode = "basic",
+        diagnosticMode = "openFilesOnly",
         autoSearchPaths = true,
         useLibraryCodeForTypes = true,
       },
